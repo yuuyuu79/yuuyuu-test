@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>テストページ</title>
+  <script>
+    // ランダムメッセージの配列
+    const messages = [
+      "こんにちは！",
+      "本文が変更されました！",
+      "テストメッセージその1",
+      "これは別の内容です。",
+      "監視テスト中です"
+    ];
+
+    // ボタンを押すと本文を変更
+    function changeContent() {
+      const randomText = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById("target").textContent = randomText;
+    }
+  </script>
+</head>
+<body>
+  <h1>これはテストページです</h1>
+  <p id="target">初期の本文です。</p>
+  <button onclick="changeContent()">本文を変更する</button>
+</body>
+</html>
